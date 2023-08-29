@@ -7,8 +7,12 @@ sp = []
 degree = 0
 number=2
 res = 0
+
 while res < user_number:
     sp.append(res)
     res = number ** degree
     degree += 1
 print(*sp)
+
+
+
