@@ -32,12 +32,12 @@ Q, Z – 10 очков.
 import re
 
 point_en = {
-        1:'AEIOULNSTR',
+        1:'AEIOULNSTR', 
       	2:'DG',
       	3:'BCMP',
       	4:'FHVWY',
       	5:'K',
-      	8:'JZ',
+      	8:'JX',
       	10:'QZ'}
 point_ru = {
         1:'АВЕИНОРСТ',
@@ -53,8 +53,7 @@ point_sum = 0
 word = input('Введите слово для подсчёта: ') 
 word = word.upper()
 check = bool(re.search('[A-Z]', word))
-print(check)
-#  вот отсюда пошла каша
+
 if check:
     for i in word:
         for key, value in point_en.items():
