@@ -7,7 +7,15 @@
 A = int(input('Ввведите первое число арифмитической прогрессии A1: '))
 d = int(input('Ввведите (разность) прогрессии d: '))
 n = int(input('Произвести вычисления для n равного: '))
-n1 = 1 #начальный коэф
+n1 = 0 #начальный коэф
 sp = []
+i=0
+def Arithmetic_mean(A, d, n):
+    for  i in range(n):
+        num =  A + i * d
+        sp.append(num)
+    return sp 
+  
+print(Arithmetic_mean(A, d, n))
 
 
