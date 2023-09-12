@@ -33,3 +33,6 @@
 # P =sympify(poly[2:])
 # print(P)
 # # 3*x**2 + 2*x + 7
+
+
+
