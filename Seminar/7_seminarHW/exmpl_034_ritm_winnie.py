@@ -29,21 +29,27 @@ poem1 = poem1.lower()
 
 poem = list(poem1.split())
 
-result = [] #[count for i in poem for j in i if j in vowels]
+# result = [] #[count for i in poem for j in i if j in vowels]
 
-for i in poem:
-    count = 0
-    for j in i:
-        if j in vowels:
-            count  += 1
-    result.append(count) 
+def Count_value(poem):
+    result = []
+    for i in poem:
+        count = 0
+        for j in i:
+            if j in vowels:
+                count  += 1
+        result.append(count) 
+    return result
 
+result = Count_value(poem)
+print(poem)
 size = len(result)
 mean = reduce(add,result)/size
 
 if [i for i in result if i != result[0]] == []:
     print('Парам пам-пам') #зачетный ритм
 else: print ('Пам парам') #'не поэт, не поэт'
+
 
 
 
