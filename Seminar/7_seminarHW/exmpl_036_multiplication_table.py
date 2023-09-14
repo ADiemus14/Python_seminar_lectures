@@ -25,20 +25,20 @@ def print_operation_table(operation, num_rows, num_columns):
         result = []
         for j in range(1,num_columns+1):
            num =  operation(i,j)
-           result.append(num)
+           result.append(str(num).ljust(3))
            if len(result) == num_rows:
             for i in result:
-                print(i, end = "!! ")
+                print(i, end = " ")
             print()
     
 
 rows = int(input('Введите число столбцов: '))
 columns = int(input('Введите число строк: '))
-mult_tab= print_operation_table(lambda x,y: x*y, rows, columns)
-print(mult_tab)
+# mult_tab= print_operation_table(lambda x,y: x*y, rows, columns)
+# print(mult_tab)
 
 
-
+print_operation_table(lambda x,y: x*y, rows, columns)
 
 # # __________________________решение 2
 

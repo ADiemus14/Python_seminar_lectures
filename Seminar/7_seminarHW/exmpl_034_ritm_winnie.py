@@ -27,9 +27,7 @@ vowels = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е', 'a', 'e', 
 poem1 = input("Введите строки Винни: ")
 poem1 = poem1.lower()
 
-poem = list(poem1.split())
-
-# result = [] #[count for i in poem for j in i if j in vowels]
+poem = poem1.split()
 
 def Count_value(poem):
     result = []
@@ -42,9 +40,9 @@ def Count_value(poem):
     return result
 
 result = Count_value(poem)
-print(poem)
-size = len(result)
-mean = reduce(add,result)/size
+# print(poem)
+# size = len(result)
+mean = reduce(add,result)/len(result)
 
 if [i for i in result if i != result[0]] == []:
     print('Парам пам-пам') #зачетный ритм
@@ -61,7 +59,7 @@ else: print ('Пам парам') #'не поэт, не поэт'
 
 
 
-
+# result = [] #[count for i in poem for j in i if j in vowels]
 
 
 
